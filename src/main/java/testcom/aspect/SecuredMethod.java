@@ -8,7 +8,7 @@ public class SecuredMethod {
        System.out.println("lockedMethod");
     }
 
-    @Secured(isLocked = false)
+    @Secured(isLocked = true)
     public void unlockedMethod() {
     	 System.out.println("unlockedMethod");
     }

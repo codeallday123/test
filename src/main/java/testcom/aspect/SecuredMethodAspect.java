@@ -16,7 +16,7 @@ public class SecuredMethodAspect {
     public Object around(ProceedingJoinPoint pjp, Secured secured) throws Throwable {
         if (secured.isLocked()) {
         	 System.out.println(pjp.getSignature().toLongString() + " is locked");
-            return null;
+            return pjp.proceed();
         } else {
             return pjp.proceed();
         }

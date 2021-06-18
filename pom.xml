@@ -7,22 +7,22 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<java.version>1.8</java.version>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<java.version>11</java.version>
 		<!-- <junit.version>4.12</junit.version> -->
 	</properties>
 
 
 	<build>
-	<pluginManagement>
+
 		<plugins>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
+				<groupId>com.nickwongdev</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
-				<version>1.8</version>
+				<version>1.12.1</version>
 				<configuration>
-					<complianceLevel>1.8</complianceLevel>
+					<complianceLevel>11</complianceLevel>
 				</configuration>
 				<executions>
 					<execution>
@@ -35,22 +35,26 @@
 
 			</plugin>
 		</plugins>
-		</pluginManagement>
+
 	</build>
+
 
 	<!-- aspectj -->
 	<dependencies>
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
-			<version>1.8.9</version>
+			<version>1.9.2</version>
 		</dependency>
-		<!--  <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency> -->
+
+		<!-- 
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.9</version>
+		</dependency> -->
+		<!-- <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
+			<version>${junit.version}</version> <scope>test</scope> </dependency> -->
 	</dependencies>
 
 </project>
